@@ -45,8 +45,25 @@ $ nc -lnvp 8000
 ```
 
 As expected we are www-data and have now a shell.  
-// lol The command execution part is now finished (there is a file in /home directory (/home/LOOKATME/password) wich contains lmezard ssh creds
+// The command execution part is now finished (there is a file in /home directory (/home/LOOKATME/password) wich contains lmezard creds (not working in ssh tho)
 
-## Getting root
+## Getting laurie
 
+After upgrade to lmezard account on the server we are presented with a tar archive in the home directory wich contains many pcap file with very few bytes but on of the file contains 30+kbyte, we will use wireshark to analyze it.  
+Seems like it's it's actually many C files which are splitted in every line, trying to compile the huge file we are missing 7 getmeX function.  
+There are all splitted across the directory we can find them by searching for getmeX, catting the file, search for file + 1 and get the return statement, put it inside the big file, do this 7 times (or with a script) compile and run:  
+```
+$ ./a.out 
+MY PASSWORD IS: Iheartpwnage
+Now SHA-256 it and submit%
+$ echo -n Iheartpwnage | sha256sum
+330b845f32185747e4f8ca15d40ca59796035c89ea809fb5d30f4da83ecf45a4
+```
 
+We have now a new combination of user / password: `laurie/330b845f32185747e4f8ca15d40ca59796035c89ea809fb5d30f4da83ecf45a4`
+
+## Getting thor
+
+Binary called bomb, let's decompile it (using gdb snif).  
+1. "Public speaking is very easy."
+2. 1 
