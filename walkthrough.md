@@ -70,6 +70,15 @@ Binary called bomb, let's decompile it (using gdb snif).
 3. 2 b 755
 4. 9
 5. o05km1
-6. 4 
+6. 4 2 6 3 1 5
 
-- All numbers must be inferior to 6 and must be different
+Well this solution does work to defuse the bomb but since it's shitty made it's not the ONLY solution, especially for the 3rd, 5th so i borrowed the correct flags from friends . (and the last level is broken).  
+1. Public speaking is very easy.
+2. 1 2 6 24 120 720
+3. 1 b 214
+4. 9
+5. opekmq
+6. 4 2 6 1 3 5
+
+Which gives us `Publicspeakingisveryeasy.126241207201b2149opekmq426135`
+We now have thor ssh creds: `thor/Publicspeakingisveryeasy.126241207201b2149opekmq426135`
