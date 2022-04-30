@@ -65,5 +65,11 @@ We have now a new combination of user / password: `laurie/330b845f32185747e4f8ca
 ## Getting thor
 
 Binary called bomb, let's decompile it (using gdb snif).  
-1. "Public speaking is very easy."
-2. 1 
+1. Public speaking is very easy.
+2. 1 2 6 24 120 720
+3. 2 b 755
+4. 9
+5. o05km1
+6. 4 
+
+- All numbers must be inferior to 6 and must be different
